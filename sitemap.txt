@@ -1,6 +1,9 @@
+http://example.com/2023/07/25/765e6122-8c83-4dad-b4cc-d8ad258bc7be_Export-42f8033b-2ceb-4f23-9cbf-5b5afdaaf3e4/Git%2036a3c11d34a3457a8baf2df8c99654a4/
+http://example.com/2023/07/25/Git%E6%95%99%E7%A8%8B/
 http://example.com/2023/07/25/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/
-http://example.com/2023/07/24/hello-world/
+http://example.com/2023/07/25/765e6122-8c83-4dad-b4cc-d8ad258bc7be_Export-42f8033b-2ceb-4f23-9cbf-5b5afdaaf3e4/Git%2036a3c11d34a3457a8baf2df8c99654a4/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%203ad4a7e8fc784c54959f877fc4cc9226/
+http://example.com/2023/07/25/765e6122-8c83-4dad-b4cc-d8ad258bc7be_Export-42f8033b-2ceb-4f23-9cbf-5b5afdaaf3e4/Git%2036a3c11d34a3457a8baf2df8c99654a4/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%203987174e986f43b681229327352567b0/
+http://example.com/2023/07/25/765e6122-8c83-4dad-b4cc-d8ad258bc7be_Export-42f8033b-2ceb-4f23-9cbf-5b5afdaaf3e4/Git%2036a3c11d34a3457a8baf2df8c99654a4/git%E6%A6%82%E8%BF%B0%20aeb02741c6b848829094da8e1ee7eebc/
 http://example.com/
-http://example.com/tags/Hexo/
-http://example.com/tags/Blogging/
-http://example.com/categories/Git/
+http://example.com/tags/Git/
+http://example.com/categories/%E5%B7%A5%E4%BD%9C/
