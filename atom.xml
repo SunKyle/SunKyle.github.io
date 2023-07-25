@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-24T07:46:33.033Z</updated>
+  <updated>2023-07-24T23:21:42.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/07/25/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+    <id>http://example.com/2023/07/25/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</id>
+    <published>2023-07-24T23:21:42.000Z</published>
+    <updated>2023-07-24T23:21:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git常用指令"><a href="#git常用指令" class="headerlink" title="git常用指令"></a>git常用指令</h1><h3 id="一、基本操作指令"><a href="#一、基本操作指令" class="headerlink" title="一、基本操作指令"></a>一、<strong>基本操作指令</strong></h3><p><code>git init</code>：初始化一个新的Git仓库。</p><p><code>git add &lt;filename&gt;</code>：将文件添加到Git索引中。</p><p><code>git commit -m &quot;Commit message&quot;</code>：提交更改，并附上提交消息。</p><p><code>git status</code>：查看当前Git仓库的状态。</p><h3 id="二、分支管理指令"><a href="#二、分支管理指令" class="headerlink" title="二、分支管理指令"></a>二、<strong>分支管理指令</strong></h3><p><code>git branch</code>：列出所有分支。</p><p><code>git branch &lt;branchname&gt;</code>：创建一个新的分支。</p><p><code>git branch -d &lt;branchname&gt;</code>：删除指定的分支。</p><p><code>git branch -a</code>：列出本地和远程所有分支。</p><p><code>git branch -m &lt;oldbranchname&gt; &lt;newbranchname&gt;</code>：将指定的分支重命名。</p><p><code>git checkout &lt;branchname&gt;</code>：切换到指定的分支。</p><p><code>git checkout -b &lt;branchname&gt;</code>：创建一个新的分支，并切换到该分支。</p><p><code>git merge &lt;branchname&gt;</code>：将指定分支合并到当前分支。</p><p><code>git push &lt;remote&gt; &lt;branch&gt;</code>：将本地分支推送到远程分支。</p><p><code>git push &lt;remote&gt; :&lt;branchname&gt;</code>：删除远程分支。</p><p><code>git pull &lt;remote&gt; &lt;branch&gt;</code>：从远程分支拉取代码并合并到当前分支。</p><h3 id="三、远程仓库指令"><a href="#三、远程仓库指令" class="headerlink" title="三、远程仓库指令"></a>三、<strong>远程仓库指令</strong></h3><p><code>git clone &lt;repository&gt;</code>：从远程仓库克隆整个代码库到本地。</p><p><code>git remote add &lt;name&gt; &lt;url&gt;</code>：将本地代码库与远程仓库进行关联。</p><p><code>git remote -v</code>：显示所有已经与本地仓库关联的远程仓库信息。</p><p><code>git fetch &lt;remote&gt;</code>：从远程仓库拉取最新的代码到本地，但不会自动合并。</p><p><code>git pull &lt;remote&gt; &lt;branch&gt;</code>：从远程仓库拉取最新的代码到本地，并自动合并到当前分支。</p><p><code>git push &lt;remote&gt; &lt;branch&gt;</code>：将本地的代码推送到远程仓库指定分支。</p><p><code>git remote show &lt;remote&gt;</code>：显示指定远程仓库的详细信息，包括分支和标签等。</p><p><code>git remote rename &lt;oldname&gt; &lt;newname&gt;</code>：将已经存在的远程仓库别名进行重命名。</p><p><code>git remote remove &lt;name&gt;</code>：删除指定名称的远程仓库关联。</p><h3 id="四、撤销操作指令"><a href="#四、撤销操作指令" class="headerlink" title="四、撤销操作指令"></a>四、<strong>撤销操作指令</strong></h3><p>在Git中，撤销操作包括撤销已提交的修改、撤销已经暂存的修改和取消已经执行的Git命令等。以下是一些常用的Git撤销操作指令：</p><p><code>git checkout &lt;file&gt;</code>：将指定文件恢复到上一次提交的状态，也可以使用 <code>git checkout .</code> 恢复所有文件。<br><code>git reset &lt;file&gt;</code>：将指定文件恢复到上一次未暂存的状态，也可以使用 <code>git reset</code> 恢复所有文件。<br><code>git reset HEAD &lt;file&gt;</code>：将指定文件从已暂存的状态中恢复到未暂存的状态。<br><code>git revert &lt;commit&gt;</code>：撤销指定的提交，生成一个新的提交以恢复先前的状态。<br><code>git stash</code>：将当前的修改暂存起来，以便稍后恢复。<br><code>git stash pop</code>：将最近一次暂存的修改还原回来，并将暂存的修改从堆栈中移除。<br><code>git cherry-pick &lt;commit&gt;</code>：将指定的提交合并到当前分支中。<br><code>git commit --amend</code>：修改上一次提交的信息</p><h3 id="五、查看日志指令"><a href="#五、查看日志指令" class="headerlink" title="五、查看日志指令"></a>五、<strong>查看日志指令</strong></h3><p><code>git log</code>：查看Git仓库的提交历史。</p><p><code>git diff</code>：查看文件的变更记录。</p><p><code>git log --graph</code>：查看分支历史记录的图形表示。</p><h3 id="六、其他操作指令"><a href="#六、其他操作指令" class="headerlink" title="六、其他操作指令"></a>六、<strong>其他操作指令</strong></h3><p><code>.gitignore</code>：忽略不需要跟踪的文件。</p><p><code>git tag &lt;tagname&gt;</code>：创建一个新的标签。</p><p><code>git stash</code>：将未提交的更改保存到一个临时的存储区，以便稍后恢复。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;git常用指令&quot;&gt;&lt;a href=&quot;#git常用指令&quot; class=&quot;headerlink&quot; title=&quot;git常用指令&quot;&gt;&lt;/a&gt;git常用指令&lt;/h1&gt;&lt;h3 id=&quot;一、基本操作指令&quot;&gt;&lt;a href=&quot;#一、基本操作指令&quot; class=&quot;headerli</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
