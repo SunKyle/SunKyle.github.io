@@ -6,7 +6,7 @@
 <p><strong>本地仓库（Local Repository）</strong>：本地仓库是存储着项目历史记录的数据库，包括了所有版本的提交和分支等信息。每个本地仓库都包含一个 <code>.git</code> 目录，该目录包含了所有的Git元数据，如对象库、分支、标签等信息。</p>
 <p><strong>远程仓库（Remote Repository）</strong>：远程仓库是存储着项目的一个备份，通常位于网络上的其他计算机或服务器上。远程仓库可以通过 <code>git clone</code> 命令进行克隆，或者通过 <code>git remote</code> 命令进行连接和管理。远程仓库允许多人协作开发同一个项目，通过推送（push）和拉取（pull）操作，可以在本地仓库和远程仓库之间进行同步。</p>
 <p>这四个工作区域在Git中扮演着不同的角色和功能，通过它们的配合，可以实现对项目的版本控制、协作开发和代码管理等功能。</p>
-<p><img src="/git%E6%A6%82%E8%BF%B0%20aeb02741c6b848829094da8e1ee7eebc/Untitled.png" alt="Untitled"></p>
+<p><img src="/../picture/pic2.png" alt="Git的四个工作区域"></p>
 <h2 id="二、五种状态"><a href="#二、五种状态" class="headerlink" title="二、五种状态"></a>二、<strong>五种状态</strong></h2><p>在Git中，一个文件可以处于以下5种状态之一：</p>
 <p>未跟踪（Untracked）：文件没有被Git追踪，即没有在Git的版本控制下。</p>
 <p>已修改（Modified）：文件已经被修改，但还没有被添加到Git的暂存区。</p>
@@ -14,7 +14,7 @@
 <p>已提交（Committed）：文件已经被提交到Git仓库中，即已经保存到Git的历史记录中。</p>
 <p>已忽略（Ignored）：文件被添加到了.gitignore文件中，Git会忽略这些文件，不会被追踪或提交到Git仓库中。</p>
 <p>通过 <code>git status</code> 命令可以查看当前工作目录下文件的状态，以及跟踪和未跟踪的文件列表。根据文件的状态，可以使用不同的Git命令进行相应的操作，如 <code>git add</code> 将文件添加到暂存区，<code>git commit</code> 将文件提交到仓库中，<code>git rm</code> 删除文件等。</p>
-<p><img src="/git%E6%A6%82%E8%BF%B0%20aeb02741c6b848829094da8e1ee7eebc/Untitled%201.png" alt="Untitled"></p>
+<p><img src="/../picture/pic1.png" alt="文件的五种状态"></p>
 </div></article></div><div class="right-container"><div class="widget"><div id="arAnchorBar"></div></div></div></section></div><div class="right-menu"></div><div class="modal search-modal"><div class="input-field"><input type="text" id="search_input"><label for="search-input">搜索</label></div><div id="search_result" class="search-result"></div></div><div class="blog-overlay"></div><footer class="row"><div class="footer-con"><div class="paginator"><a href="/2023/07/25/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" title="git基础教程" class="prev">PREV</a></div><div class="copyright"><p>© 2016 - 2023 <a target="_blank">KyleSun</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <br> and <a href="https://github.com/Bulandent/hexo-theme-bubuzou" target="_blank">hexo-theme-bubuzou</a></p><p> <span style="padding-right: 6px;">闽ICP备16007301号-2</span></p></div><div class="totop"><i></i></div></div></footer><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/jquery-1.8.2.min.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/articleCatalog.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/main.js"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>const valineAPI = (() => {
 try {
     AV.init("aD8jJBpu4oew3ovNY73z6Rdq-gzGzoHsz", "FdzS5SOPHdhYQoEUngQ8K2QW");
