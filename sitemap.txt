@@ -6,3 +6,4 @@ http://example.com/
 http://example.com/tags/Git/
 http://example.com/tags/Spring/
 http://example.com/categories/%E5%B7%A5%E4%BD%9C/
+http://example.com/categories/%E5%B7%A5%E4%BD%9C/Spring/
