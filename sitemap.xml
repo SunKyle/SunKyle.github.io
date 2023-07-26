@@ -70,7 +70,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%B7%A5%E4%BD%9C/Spring/</loc>
+    <loc>http://example.com/categories/%E5%B7%A5%E4%BD%9C%E3%80%81Spring/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
