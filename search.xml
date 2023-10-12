@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2023/10/12/Vue%E7%AE%80%E4%BB%8B/"/>
+      <url>/2023/10/12/Vue%E7%AE%80%E4%BB%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Vue简介"><a href="#Vue简介" class="headerlink" title="Vue简介"></a>Vue简介</h1><p>一、基本概念</p><blockquote><p>声明式渲染：只告诉程序想要什么结果，如何达成由程序保证，开发者不用关心。不用操作DOM，直接更新数据</p></blockquote><p>命令式渲染：一步一步告诉程序怎么做，能否达成结果取决于开发者的设计。</p><p>声明式渲染好处：<br>比如在vue中，只需定义好展示数据，并把它放在 template中 合适的位置。</p><p>而命令式渲染，如果 DOM 发生变化，js 代码也需要做相应的改变，耦合度很强。<br>而重绘非常耗费性能。JS操作Dom，常常频繁地触发重绘。但是如果把更新 DOM 的操作交给 Vue、React 去做，让 Virtual DOM 发挥作用，可有效提高页面性能。</p><p><img src="/Vue%E7%AE%80%E4%BB%8B%20788e01d5ab5b48afbc2ee3d169eae86e/Untitled.png" alt="Untitled"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git常用指令</title>
       <link href="/2023/07/25/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
       <url>/2023/07/25/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
@@ -88,7 +101,7 @@
       
       <categories>
           
-          <category> 工作、Spring </category>
+          <category> SpringMVC </category>
           
       </categories>
       
@@ -96,6 +109,8 @@
         <tags>
             
             <tag> Spring </tag>
+            
+            <tag> AOP </tag>
             
         </tags>
       

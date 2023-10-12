@@ -1,3 +1,4 @@
+http://example.com/2023/10/12/Vue%E7%AE%80%E4%BB%8B/
 http://example.com/2023/07/25/AOP/
 http://example.com/2023/07/25/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/
 http://example.com/2023/07/25/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/
@@ -5,5 +6,6 @@ http://example.com/2023/07/25/git%E6%A6%82%E8%BF%B0/
 http://example.com/
 http://example.com/tags/Git/
 http://example.com/tags/Spring/
+http://example.com/tags/AOP/
 http://example.com/categories/%E5%B7%A5%E4%BD%9C/
-http://example.com/categories/%E5%B7%A5%E4%BD%9C%E3%80%81Spring/
+http://example.com/categories/SpringMVC/
