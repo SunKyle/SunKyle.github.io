@@ -7,5 +7,7 @@ http://example.com/
 http://example.com/tags/Git/
 http://example.com/tags/Spring/
 http://example.com/tags/AOP/
+http://example.com/tags/Vue/
 http://example.com/categories/%E5%B7%A5%E4%BD%9C/
 http://example.com/categories/SpringMVC/
+http://example.com/categories/%E5%AD%A6%E4%B9%A0/
