@@ -1,7 +1,7 @@
+http://example.com/read/index.html
 http://example.com/live/index.html
 http://example.com/categories/index.html
 http://example.com/about/index.html
-http://example.com/read/index.html
 http://example.com/2023/10/12/Vue%E7%AE%80%E4%BB%8B/
 http://example.com/2023/07/25/AOP/
 http://example.com/2023/07/25/git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/
