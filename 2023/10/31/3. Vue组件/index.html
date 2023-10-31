@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="baidu-site-verification" content="1EB8XoOl0C"><meta name="google-site-verification" content="K7thEgdLm0UfRWJ5MGdF7sCcjClSzAlxFLPv2Oz5CGM"><title> Vue组件 · KyleSun的个人博客</title><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Vue组件 - KyleSun"><meta name="keywords"><meta name="author" content="KyleSun"><link rel="short icon" href="https://files.catbox.moe/n63k73.png"><link rel="stylesheet" href="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/bubuzou.css"><link rel="search" type="application/opensearchdescription+xml" href="http://example.com/atom.xml" title="KyleSun的个人博客"><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="KyleSun的个人博客" type="application/atom+xml">
+</head><body><header><div class="header row"> <a href="/" class="logo-link"><img src="https://files.catbox.moe/n63k73.png"></a><ul id="nav_list" class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" data-hover="博文" class="nav-list-link">博文</a></li><li class="nav-list-item"><a href="/archives/" target="_self" data-hover="归档" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/live/" target="_self" data-hover="生活" class="nav-list-link">生活</a></li><li class="nav-list-item"><a href="/read/" target="_self" data-hover="读书" class="nav-list-link">读书</a></li><li class="nav-list-item"><a href="/about/" target="_self" data-hover="关于" class="nav-list-link">关于</a></li></ul><div class="search"><a id="search_btn" href="#search"></a></div><div id="nav_btn" class="nav-btn"><span></span><span></span><span></span></div></div></header><div class="row scroll-con"><section class="container"><!-- for archive page--><div id="postAr" class="post"><article class="post-block"><h1 class="post-title">Vue组件</h1><div class="post-info">2023-10-31<p class="visit"><i data-identity="2023/10/31/3. Vue组件/" class="article-timer"></i><span>次访问</span></p></div><div class="post-content"><p>##1. 单文件组件</p>
+<p>在大多数启用了构建工具的 Vue 项目中，我们可以使用一种类似 HTML 格式的文件来书写 Vue 组件，它被称为<strong>单文件组件</strong> (也被称为 <code>*.vue</code> 文件，英文 Single-File Components，缩写为 <strong>SFC</strong>)。顾名思义，Vue 的单文件组件会将一个组件的逻辑 (JavaScript)，模板 (HTML) 和样式 (CSS) 封装在同一个文件里。下面我们将用单文件组件的格式重写计数器示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//逻辑</span></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">count</span>: <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//模板</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;count++&quot;</span>&gt;</span>Count is: &#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//样式</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"><span class="selector-tag">button</span> &#123;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="attribute">font-weight</span>: bold;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-组件选项"><a href="#2-组件选项" class="headerlink" title="2. 组件选项"></a>2. 组件选项</h2><p> Vue.js 组件中的一些常见属性和选项：</p>
+<ol>
+<li><strong>data</strong>：一个函数，返回包含组件内部数据的对象。这些数据在组件的模板中使用，用于渲染视图。</li>
+<li><strong>computed</strong>：包含计算属性的对象，计算属性允许你根据已有的数据属性计算派生值。</li>
+<li><strong>methods</strong>：包含组件方法的对象，可以在模板中触发。</li>
+<li><strong>props</strong>：用于接收父组件传递的数据，定义组件的输入。</li>
+<li><strong>propsData</strong>：用于测试，手动传递 props 数据。</li>
+<li><strong>emits</strong>：定义组件的自定义事件。</li>
+<li><strong>setup</strong>：用于 Composition API，提供组件的配置和响应式数据。</li>
+<li><strong>components</strong>：包含局部注册的子组件。</li>
+<li><strong>directives</strong>：包含局部注册的自定义指令。</li>
+<li><strong>filters</strong>：包含局部注册的自定义过滤器。</li>
+<li><strong>watch</strong>：用于观察数据的变化，执行相应的操作。</li>
+<li><strong>mixins</strong>：包含混入（Mixins）对象的数组，用于共享组件选项。</li>
+<li><strong>extends</strong>：用于继承另一个组件的选项。</li>
+<li><strong>provide</strong> 和 <strong>inject</strong>：用于父子组件之间的依赖注入。</li>
+<li><strong>inheritAttrs</strong>：控制是否将非props属性传递给根元素。</li>
+<li><strong>name</strong>：定义组件的名称。</li>
+<li><strong>model</strong>：配置 v-model 的默认行为。</li>
+<li><strong>delimiters</strong>：自定义插值表达式的分隔符。</li>
+<li><strong>comments</strong>：控制是否保留模板编译时的注释。</li>
+<li><strong>functional</strong>：使组件无状态和无实例，通常用于函数式组件。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; title &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;task in tasks&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;task.id&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#123;&#123; task.title &#125;&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;addTask&quot;</span>&gt;</span>Add Task<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">	<span class="comment">// 组件的名称</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">name</span>: <span class="string">&#x27;TodoList&#x27;</span>, </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="comment">// 父组件传递的属性</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">props</span>: &#123; </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">title</span>: <span class="title class_">String</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">initialTasks</span>: <span class="title class_">Array</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="comment">// 组件内部数据</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">data</span>(<span class="params"></span>) &#123; </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">return</span> &#123;    </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">tasks</span>: <span class="variable language_">this</span>.<span class="property">initialTasks</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="comment">// 计算属性</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">computed</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">taskCount</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">tasks</span>.<span class="property">length</span>;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="comment">// 组件方法</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">methods</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">addTask</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">const</span> newTask = &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">id</span>: <span class="variable language_">this</span>.<span class="property">taskCount</span> + <span class="number">1</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">title</span>: <span class="string">`Task <span class="subst">$&#123;<span class="variable language_">this</span>.taskCount + <span class="number">1</span>&#125;</span>`</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">this</span>.<span class="property">tasks</span>.<span class="title function_">push</span>(newTask);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"> 	<span class="comment">// 观察数据变化</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">watch</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">tasks</span>(<span class="params">newTasks</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Tasks have changed:&#x27;</span>, newTasks);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="comment">// 自定义指令</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">directives</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">focus</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="title function_">inserted</span>(<span class="params">el</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        el.<span class="title function_">focus</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">filters</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="comment">// 自定义过滤器</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">capitalize</span>(<span class="params">value</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">return</span> value.<span class="title function_">charAt</span>(<span class="number">0</span>).<span class="title function_">toUpperCase</span>() + value.<span class="title function_">slice</span>(<span class="number">1</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">	<span class="comment">// 局部注册子组件</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">components</span>: &#123;  </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title class_">TaskItem</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">template</span>: <span class="string">&#x27;&lt;div&gt;&#123;&#123; task.title | capitalize &#125;&#125;&lt;/div&gt;&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">props</span>: [<span class="string">&#x27;task&#x27;</span>],</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">	<span class="comment">// 配置v-model的默认行为</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">model</span>: &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">prop</span>: <span class="string">&#x27;checked&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">event</span>: <span class="string">&#x27;change&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"> <span class="comment">// 提供依赖注入</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">provide</span>(<span class="params"></span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">return</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">todoList</span>: <span class="variable language_">this</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  &#125;,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-组件注册"><a href="#3-组件注册" class="headerlink" title="3. 组件注册"></a>3. 组件注册</h2><h3 id="3-1全局注册"><a href="#3-1全局注册" class="headerlink" title="3.1全局注册"></a>3.1全局注册</h3><p>我们可以使用 <a target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/essentials/application.html">Vue 应用实例</a>的 <strong><code>app.component()</code></strong> 方法，让组件在当前 Vue 应用中全局可用。全局注册的组件可以在此应用的任意组件的模板中使用。具体步骤如下：</p>
+<ol>
+<li>创建组件（XXX.vue文件）</li>
+<li>Main.js文件中进行全局注册</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js文件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(&#123;&#125;)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">component</span>(</span><br><span class="line">  <span class="comment">// 注册的名字</span></span><br><span class="line">  <span class="string">&#x27;MyComponent&#x27;</span>,</span><br><span class="line">  <span class="comment">// 组件的实现</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果使用单文件组件，你可以注册被导入的 <code>.vue</code> 文件：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">MyComponent</span> <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line">app.<span class="title function_">component</span>(<span class="string">&#x27;MyComponent&#x27;</span>, <span class="title class_">MyComponent</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>app.component()</code> 方法可以被链式调用：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app</span><br><span class="line">  .<span class="title function_">component</span>(<span class="string">&#x27;ComponentA&#x27;</span>, <span class="title class_">ComponentA</span>)</span><br><span class="line">  .<span class="title function_">component</span>(<span class="string">&#x27;ComponentB&#x27;</span>, <span class="title class_">ComponentB</span>)</span><br><span class="line">  .<span class="title function_">component</span>(<span class="string">&#x27;ComponentC&#x27;</span>, <span class="title class_">ComponentC</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 这在当前应用的任意组件中都可用 --&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">ComponentA</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">ComponentB</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">ComponentC</span>/&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注：<strong>所有的子组件也可以使用全局注册的组件，这意味着这三个组件也都可以在<em>彼此内部</em>使用。</strong></p>
+</blockquote>
+<h3 id="3-2局部注册"><a href="#3-2局部注册" class="headerlink" title="3.2局部注册"></a>3.2局部注册</h3><p>全局注册虽然很方便，但有以下几个问题：</p>
+<ol>
+<li><p>全局注册，但并没有被使用的组件无法在生产打包时被自动移除 (也叫“tree-shaking”)。如果你全局注册了一个组件，即使它并没有被实际使用，它仍然会出现在打包后的 JS 文件中。</p>
+</li>
+<li><p>全局注册在大型项目中使项目的依赖关系变得不那么明确。在父组件中使用子组件时，不太容易定位子组件的实现。和使用过多的全局变量一样，这可能会影响应用长期的可维护性。</p>
+</li>
+</ol>
+<p>相比之下，局部注册的组件需要在使用它的父组件中显式导入，并且只能在该父组件中使用。<strong>它的优点是使组件之间的依赖关系更加明确，并且对 tree-shaking 更加友好。</strong></p>
+<p>局部注册需要使用 <code>components</code> 选项：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="comment">//1. 先引入组件</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ComponentA</span> <span class="keyword">from</span> <span class="string">&#x27;./ComponentA.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"> <span class="comment">//2. 组件注册</span></span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    <span class="title class_">ComponentA</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  //3.使用组件</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">ComponentA</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>对于每个 <code>components</code> 对象里的属性，它们的 key 名就是注册的组件名，而值就是相应组件的实现。上面的例子中使用的是 ES2015 的缩写语法，等价于：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    <span class="title class_">ComponentA</span>: <span class="title class_">ComponentA</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注：<strong>局部注册的组件在后代组件中并不可用</strong>。在这个例zi中，<code>ComponentA</code> 注册后仅在当前组件可用，而在任何的子组件或更深层的子组件中都不可用。</p>
+</blockquote>
+<h2 id="4-组件通信"><a href="#4-组件通信" class="headerlink" title="4. 组件通信"></a>4. 组件通信</h2><h3 id="4-1-父子组件通信"><a href="#4-1-父子组件通信" class="headerlink" title="4.1 父子组件通信"></a>4.1 父子组件通信</h3><p>####4.1.1 父→子</p>
+<p>父子组件通信是Vue.js中最常见的一种组件通信方式。父组件使用 <code>:message=&quot;parentMessage&quot;</code> 将数据传递给子组件。子组件通过 <code>props: [&quot;message&quot;]</code> 来接收这个数据，并在模板中显示它。父组件可以随时更新<code>parentMessage</code>的值，子组件将根据新的值进行更新。</p>
+<ul>
+<li><strong>父组件（ParentComponent.vue）：</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;父组件&lt;/h1&gt;</span><br><span class="line">    &lt;ChildComponent :message=&quot;parentMessage&quot; /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import ChildComponent from &quot;./ChildComponent.vue&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    ChildComponent,</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      parentMessage: &quot;这是来自父组件的消息&quot;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>子组件（ChildComponent.vue）：</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h2&gt;子组件&lt;/h2&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; message &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: [&quot;message&quot;],</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-1-2-子→父"><a href="#4-1-2-子→父" class="headerlink" title="4.1.2 子→父"></a>4.1.2 子→父</h4><p>在Vue.js中，子组件向父组件传递数据通常使用自定义事件（Custom Events）来实现。这允许子组件触发事件，然后父组件可以监听这些事件并响应子组件的操作。以下是一个示例，演示如何在子组件中触发自定义事件并将数据传递给父组件：</p>
+<ul>
+<li><strong>子组件触发自定义事件（子组件）：</strong>子组件通过 <code>$emit</code> 方法触发名为 “custom-event” 的自定义事件，并将数据传递给父组件。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;button @click=&quot;sendDataToParent&quot;&gt;向父组件传递数据&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    sendDataToParent() &#123;</span><br><span class="line">      const data = &quot;这是来自子组件的数据&quot;;</span><br><span class="line">      this.$emit(&quot;custom-event&quot;, data); // 触发自定义事件并传递数据</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>父组件监听自定义事件（父组件）：</strong>在父组件中，我们通过 <code>@custom-event=&quot;handleChildEvent&quot;</code> 监听子组件触发的自定义事件，并在事件触发时调用 <code>handleChildEvent</code> 方法来接收子组件传递的数据。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;父组件&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;从子组件接收的数据: &#123;&#123; receivedData &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;child-component @custom-event=&quot;handleChildEvent&quot;&gt;&lt;/child-component&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import ChildComponent from &quot;./ChildComponent.vue&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    ChildComponent,</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      receivedData: &quot;&quot;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handleChildEvent(data) &#123;</span><br><span class="line">      this.receivedData = data; // 处理来自子组件的数据</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-非父子组件通信"><a href="#4-2-非父子组件通信" class="headerlink" title="4.2 非父子组件通信"></a>4.2 非父子组件通信</h3><p>非父子组件通信通常需要<strong>一种全局状态管理的机制</strong>，以便不同组件之间能够共享数据和进行通信。Vue.js 提供了一些方式来实现非父子组件之间的通信，其中包括使用事件总线、Vuex（状态管理库）和 provide&#x2F;inject。下面我将介绍这些方式。</p>
+<p>####4.2.1 <strong>事件总线 (Event Bus)</strong></p>
+<p>事件总线是一个Vue实例，你可以用它来触发和监听事件。创建一个事件总线，然后在需要通信的组件中使用 <code>$emit</code> 触发事件，并使用 <code>$on</code> 监听事件。</p>
+<ul>
+<li><strong>创建事件总线（event-bus.js）：</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title class_">EventBus</span> = <span class="keyword">new</span> <span class="title class_">Vue</span>();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>接收方组件</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 监听事件</span></span><br><span class="line"><span class="title class_">EventBus</span>.$on(<span class="string">&#x27;my-event&#x27;</span>, <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 处理数据</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>发送方组件</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 发送事件</span></span><br><span class="line"><span class="title class_">EventBus</span>.$emit(<span class="string">&#x27;my-event&#x27;</span>, data);</span><br></pre></td></tr></table></figure>
+
+<p>####4.2.2 <strong>provide&#x2F;inject</strong></p>
+<p>Vue 提供了 <code>provide</code> 和 <code>inject</code> 选项，允许祖先组件提供数据，然后后代组件使用 <code>inject</code> 来接收这些数据。这对于祖先和后代组件之间的通信非常有用。</p>
+<ul>
+<li><strong>祖先组件（provide-data.vue）：</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  provide() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      sharedData: &#x27;这是共享的数据&#x27;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>后代组件（consume-data.vue）：</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;p&gt;&#123;&#123; sharedData &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  inject: [&#x27;sharedData&#x27;],</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>####4.2.3 Vuex 状态管理库</p>
+<p> Vuex 是一个专门用于状态管理的库，允许你在整个应用程序中共享状态。你可以在任何组件中访问和修改状态，以及触发事件。它提供了一个中央存储，包括状态、mutations、actions和getters。</p>
+<p>安装和配置 Vuex，然后在组件中使用 <code>this.$store</code> 访问状态和触发 mutations 和 actions。</p>
+<p>####4.2.4 作用域插槽</p>
+<p>详见章节 5.3</p>
+<p>##5. 插槽</p>
+<p>在Vue.js中，插槽（Slot）是一种用于在组件之间传递内容的机制，它允许你将内容插入到组件的特定位置。插槽是一种强大的抽象，它使得组件更加灵活和可重用，允许开发者在不同情况下自定义组件的外观和行为。</p>
+<p>通过使用插槽，你可以将任何内容插入到组件中，使组件更加灵活和可定制。插槽是Vue.js组件化开发的一个关键特性，它有助于构建可重用的组件，同时允许开发者根据需要自定义组件的外观和内容。</p>
+<h3 id="5-1-默认插槽"><a href="#5-1-默认插槽" class="headerlink" title="5.1 默认插槽"></a>5.1 <strong>默认插槽</strong></h3><p>默认插槽是组件中未命名的插槽，它用于插入未分配到任何具名插槽的内容。默认插槽通常用在组件的模板中，使用<code>&lt;slot&gt;&lt;/slot&gt;</code>标签定义。</p>
+<ul>
+<li><strong>子组件定义插槽：</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;默认插槽示例&lt;/h1&gt;</span><br><span class="line">    //插槽位置</span><br><span class="line">    &lt;slot&gt;&lt;/slot&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>父组件使用插槽：</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-component&gt;</span><br><span class="line">  &lt;p&gt;This is the main content.&lt;/p&gt;</span><br><span class="line">&lt;/my-component&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-2-具名插槽"><a href="#5-2-具名插槽" class="headerlink" title="5.2 具名插槽"></a>5.2 具名插槽</h3><p>具名插槽是具有名称的插槽，允许你在父组件中选择性地将内容插入到组件的特定位置。具名插槽可以在父组件中使用<code>&lt;template v-slot:slotName&gt;&lt;/template&gt;</code>标签来定义。</p>
+<ul>
+<li><strong>子组件定义插槽：</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;具名插槽示例&lt;/h1&gt;</span><br><span class="line">    &lt;slot name=&quot;header&quot;&gt;&lt;/slot&gt;</span><br><span class="line">    &lt;div class=&quot;content&quot;&gt;</span><br><span class="line">      &lt;slot&gt;&lt;/slot&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>在父组件中使用具名插槽</strong>：<code>template</code>标签配合<code>#插槽名</code></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-component&gt;</span><br><span class="line">  &lt;template v-slot:header&gt;</span><br><span class="line">    &lt;h2&gt;This is the header&lt;/h2&gt;</span><br><span class="line">  &lt;/template&gt;</span><br><span class="line">  &lt;p&gt;This is the main content.&lt;/p&gt;</span><br><span class="line">&lt;/my-component&gt;</span><br><span class="line"></span><br><span class="line">//简化写法</span><br><span class="line">&lt;my-component&gt;</span><br><span class="line">  &lt;template #header&gt;</span><br><span class="line">    &lt;h2&gt;This is the header&lt;/h2&gt;</span><br><span class="line">  &lt;/template&gt;</span><br><span class="line">  &lt;p&gt;This is the main content.&lt;/p&gt;</span><br><span class="line">&lt;/my-component&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-作用域插槽"><a href="#5-3-作用域插槽" class="headerlink" title="5.3 作用域插槽"></a>5.3 作用域插槽</h3><p>通过插槽（Slot）传递值通常需要结合使用<strong>具名插槽</strong>和<strong>作用域插槽（Scoped Slot）</strong>。这使得在父组件中将数据传递到插槽中成为可能。以下是一个示例，演示如何通过插槽传递值。在这个示例中，组件A定义了一个具名插槽，用于传递消息。组件B使用了组件A，并在插槽中接收消息。组件B还包含了一个按钮，当点击按钮时，会调用一个方法来显示消息。</p>
+<ul>
+<li><strong>组件A定义具名插槽：</strong>组件A使用<code>:message=&quot;slotMessage&quot;</code>将数据绑定到插槽。默认插槽名为default。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;slot :message=&quot;slotMessage&quot;&gt;&lt;/slot&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      slotMessage: &quot;这是组件A传递的消息&quot;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>组件B接受插槽传递值：</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;组件B&lt;/h1&gt;</span><br><span class="line">    &lt;component-a&gt;</span><br><span class="line">      //默认插槽名为default</span><br><span class="line">      &lt;template v-slot:default=&quot;slotProps&quot;&gt;</span><br><span class="line">        &lt;p&gt;组件B收到的消息: &#123;&#123; slotProps.message &#125;&#125;&lt;/p&gt;</span><br><span class="line">        &lt;button @click=&quot;showMessage(slotProps.message)&quot;&gt;显示消息&lt;/button&gt;</span><br><span class="line">      &lt;/template&gt;</span><br><span class="line">    &lt;/component-a&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import ComponentA from &quot;./ComponentA.vue&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    ComponentA,</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    showMessage(message) &#123;</span><br><span class="line">      alert(message);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+</div></article></div><div class="right-container"><div class="widget"><div id="arAnchorBar"></div></div></div></section></div><div class="right-menu"></div><div class="modal search-modal"><div class="input-field"><input type="text" id="search_input"><label for="search-input">搜索</label></div><div id="search_result" class="search-result"></div></div><div class="blog-overlay"></div><footer class="row"><div class="footer-con"><div class="paginator"><a href="/2023/10/31/2.%20Vue%E6%8C%87%E4%BB%A4/" title="Vue指令" class="prev">PREV</a><a href="/2023/10/31/5.%20Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" title="Vue生命周期" class="next">NEXT</a></div><div class="copyright"><p>© 2023 <a target="_blank">KyleSun</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <br> and <a href="https://github.com/Bulandent/hexo-theme-bubuzou" target="_blank">hexo-theme-bubuzou</a></p><p> <span style="padding-right: 6px;">闽ICP备16007301号-2</span></p></div><div class="totop"><i></i></div></div></footer><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/jquery-1.8.2.min.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/articleCatalog.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/main.js"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>const valineAPI = (() => {
+try {
+    AV.init("aD8jJBpu4oew3ovNY73z6Rdq-gzGzoHsz", "FdzS5SOPHdhYQoEUngQ8K2QW");
+} catch(error) {}
+const isExist = (identity) => {
+    identity = identity || getRealPath();
+    let query = new AV.Query('Timer');
+    return new Promise((resolve, reject) => {
+    query.equalTo("identity", identity);
+    query.find().then(results => {
+        resolve(results.length > 0);
+    }, error => reject(error));
+    })
+}
+
+const _get = (identity) => {
+    let query = null;
+    if(identity && identity instanceof Array){
+    let querys = [];
+    for(let i = 0; i < identity.length; ++i) {
+        querys[i] = new AV.Query('Timer');
+        querys[i].equalTo('identity', identity[i]);
+    }
+    query = AV.Query.or.apply(null ,querys);
+    } else {
+    identity = identity || getRealPath();
+    query = new AV.Query("Timer");
+    query.equalTo("identity", identity);
+    }
+
+    return new Promise((resolve, reject) => {
+    query.find()
+    .then(results => resolve(results))
+    .catch(error => reject(error))
+    })
+}
+
+const create = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let Todo = AV.Object.extend('Timer');
+    let todo = new Todo();
+    todo.set("times", 1);
+    todo.set("identity", identity);
+    todo.save().then(res => resolve(true), error => reject(error));
+    })
+}
+
+const update = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let query = new AV.Query('Timer');
+    query.equalTo("identity", identity);
+    query.find().then(todos => {
+        todos.forEach(todo => {
+        todo.set("times", todo.attributes.times + 1);
+        });
+        return AV.Object.saveAll(todos);
+    }).then(todos => resolve(true), error => reject(error));
+    })
+}
+
+return {
+    isExist,
+    _get,
+    update,
+    create
+}
+})()
+
+const calcAndWriteTimes = () => {
+let isPost = true;
+
+let timerAllDOM = document.querySelectorAll(".article-timer");
+
+if(isPost) {
+    let identity = timerAllDOM[0].getAttribute("data-identity");
+    valineAPI.isExist(identity)
+    .then(exist => {
+    if(exist) {
+        return valineAPI.update(identity);
+    }
+    return new Promise(resolve => resolve(true));
+    })
+    .then( succuess => valineAPI._get(identity))
+    .then( result => timerAllDOM[0].innerText = result[0].attributes.times)
+    .catch(error => console.log(error.message))
+    return ;
+}
+
+let timerDOMCache = {};
+
+for(let timerDOM of timerAllDOM) {
+    let identity = timerDOM.getAttribute("data-identity");
+    if(timerDOMCache.hasOwnProperty(identity)){
+    timerDOMCache[identity].dom.push(timerDOM);
+    }else{
+    timerDOMCache[identity] = {
+        dom: [timerDOM],
+        times: undefined
+    };
+    }
+}
+
+let identities = Object.keys(timerDOMCache);
+valineAPI._get(identities).then(results => {
+    for(let result of results) {
+    let {identity, times} = result.attributes;
+    timerDOMCache[identity].times = times;
+    timerDOMCache[identity].dom.map(item => item.innerText = times);
+    }
+    for(let identity of identities) {
+    if(timerDOMCache[identity].times){
+        continue;
+    }
+    timerDOMCache[identity].dom.map(item => item.innerText = 1);
+    valineAPI.create(identity);
+    }
+}).catch(error => console.log(error.message))
+}
+
+if(true){
+calcAndWriteTimes();
+}</script></body></html>

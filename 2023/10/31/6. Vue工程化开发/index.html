@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="baidu-site-verification" content="1EB8XoOl0C"><meta name="google-site-verification" content="K7thEgdLm0UfRWJ5MGdF7sCcjClSzAlxFLPv2Oz5CGM"><title> Vue工程化开发 · KyleSun的个人博客</title><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Vue工程化开发 - KyleSun"><meta name="keywords"><meta name="author" content="KyleSun"><link rel="short icon" href="https://files.catbox.moe/n63k73.png"><link rel="stylesheet" href="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/bubuzou.css"><link rel="search" type="application/opensearchdescription+xml" href="http://example.com/atom.xml" title="KyleSun的个人博客"><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="KyleSun的个人博客" type="application/atom+xml">
+</head><body><header><div class="header row"> <a href="/" class="logo-link"><img src="https://files.catbox.moe/n63k73.png"></a><ul id="nav_list" class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" data-hover="博文" class="nav-list-link">博文</a></li><li class="nav-list-item"><a href="/archives/" target="_self" data-hover="归档" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/live/" target="_self" data-hover="生活" class="nav-list-link">生活</a></li><li class="nav-list-item"><a href="/read/" target="_self" data-hover="读书" class="nav-list-link">读书</a></li><li class="nav-list-item"><a href="/about/" target="_self" data-hover="关于" class="nav-list-link">关于</a></li></ul><div class="search"><a id="search_btn" href="#search"></a></div><div id="nav_btn" class="nav-btn"><span></span><span></span><span></span></div></div></header><div class="row scroll-con"><section class="container"><!-- for archive page--><div id="postAr" class="post"><article class="post-block"><h1 class="post-title">Vue工程化开发</h1><div class="post-info">2023-10-31<p class="visit"><i data-identity="2023/10/31/6. Vue工程化开发/" class="article-timer"></i><span>次访问</span></p></div><div class="post-content"><h2 id="1-Vue安装和项目创建"><a href="#1-Vue安装和项目创建" class="headerlink" title="1. Vue安装和项目创建"></a>1. Vue安装和项目创建</h2><blockquote>
+<p>注：这个过程使用Vue CLI，<strong>确保已安装Node.js和npm。</strong></p>
+</blockquote>
+<h3 id="步骤1：安装Vue-CLI"><a href="#步骤1：安装Vue-CLI" class="headerlink" title="步骤1：安装Vue CLI"></a>步骤1：安装Vue CLI</h3><p>首先，你需要全局安装Vue CLI。打开终端并运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
+
+<p>###步骤2：创建Vue项目</p>
+<p>Vue CLI将提示你选择一个预设配置或手动配置项目。选择一个预设配置，或使用箭头键和回车键进行手动配置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create my-vue-app</span><br></pre></td></tr></table></figure>
+
+<p>###步骤3：项目配置</p>
+<p>如果你选择手动配置，你将需要配置一些选项，例如Babel、ESLint、预处理器等。根据你的项目需求进行选择，或使用默认配置。Vue CLI将显示一系列可配置的特性。使用箭头键和回车键来选择和配置这些特性，例如：</p>
+<ul>
+<li><strong>Babel</strong>：用于将ES6+语法编译成浏览器可识别的JavaScript。</li>
+<li><strong>TypeScript</strong>：如果你想在项目中使用TypeScript。</li>
+<li><strong>ESLint</strong>：用于代码规范检查。</li>
+<li><strong>Unit Testing</strong>：如果你希望添加单元测试。</li>
+<li><strong>E2E Testing</strong>：如果你希望添加端到端测试。</li>
+<li><strong>Router</strong>：用于Vue Router的支持。</li>
+<li><strong>Vuex</strong>：用于状态管理的支持。</li>
+<li>等等…</li>
+</ul>
+<p>###步骤4：依赖安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>###步骤5：启动服务器</p>
+<ol>
+<li><p><strong>进入项目目录</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> my-vue-app</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>启动开发服务器</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run serve</span><br></pre></td></tr></table></figure>
+
+<p>开发服务器将运行，并你将看到一个本地服务器地址（通常是<code>http://localhost:8080/</code>）。在浏览器中打开此地址以查看你的Vue应用。</p>
+</li>
+</ol>
+<h3 id="步骤6：开发项目"><a href="#步骤6：开发项目" class="headerlink" title="步骤6：开发项目"></a>步骤6：开发项目</h3><p>现在你可以开始开发项目。Vue CLI已为你生成一个基本的Vue.js应用，你可以在<code>src/</code>目录中找到主要的应用代码。</p>
+<p>###步骤7：构建项目</p>
+<p>当项目完成时，你可以使用以下命令来构建生产版本的项目：这将生成一个<code>dist</code>目录，其中包含用于生产部署的优化文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<p>###步骤8：<strong>部署项目</strong></p>
+<p>将<code>dist</code>目录中的文件部署到Web服务器或静态文件托管服务上，以使你的Vue应用在生产环境中运行。</p>
+<h2 id="2-Vue项目架构"><a href="#2-Vue项目架构" class="headerlink" title="2. Vue项目架构"></a>2. Vue项目架构</h2><p>Vue.js项目通常遵循一种标准的项目结构，以确保项目的组织、可维护性和可扩展性。以下是一个常见的Vue项目结构示例：</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">my-vue-app/</span><br><span class="line">|<span class="comment">-- public/</span></span><br><span class="line">|   |<span class="comment">-- index.html           # 应用入口HTML文件</span></span><br><span class="line">|   |<span class="comment">-- favicon.ico          # 网站图标</span></span><br><span class="line">|<span class="comment">-- src/</span></span><br><span class="line">|   |<span class="comment">-- assets/              # 静态资源文件，如图片、样式表</span></span><br><span class="line">|   |<span class="comment">-- components/          # 可复用的Vue组件</span></span><br><span class="line">|   |<span class="comment">-- views/               # 页面级别的Vue组件</span></span><br><span class="line">|   |<span class="comment">-- router/              # Vue Router配置文件</span></span><br><span class="line">|   |<span class="comment">-- store/               # Vuex状态管理文件</span></span><br><span class="line">|   |<span class="comment">-- api/                 # API请求封装</span></span><br><span class="line">|   |<span class="comment">-- utils/               # 工具函数、辅助类</span></span><br><span class="line">|   |<span class="comment">-- mixins/              # 全局混入</span></span><br><span class="line">|   |<span class="comment">-- directives/          # 自定义指令</span></span><br><span class="line">|   |<span class="comment">-- filters/             # 过滤器</span></span><br><span class="line">|   |<span class="comment">-- plugins/             # 第三方插件或库</span></span><br><span class="line">|   |<span class="comment">-- styles/              # 全局样式文件</span></span><br><span class="line">|   |<span class="comment">-- main.js              # 应用入口JavaScript文件</span></span><br><span class="line">|   |<span class="comment">-- App.vue              # 应用的主组件</span></span><br><span class="line">|<span class="comment">-- tests/                   # 测试文件</span></span><br><span class="line">|<span class="comment">-- package.json             # 项目依赖和配置</span></span><br><span class="line">|<span class="comment">-- babel.config.js          # Babel配置文件</span></span><br><span class="line">|<span class="comment">-- vue.config.js            # Vue CLI配置文件</span></span><br><span class="line">|<span class="comment">-- .eslintrc.js             # ESLint配置文件</span></span><br><span class="line">|<span class="comment">-- README.md                # 项目文档</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>**public&#x2F;**：这个目录包含不需要经过构建处理的静态资源文件，如<code>index.html</code>、网站图标等。</li>
+<li>**src&#x2F;**：这是主要的项目源代码目录，包括组件、视图、路由、状态管理等。具体如下：<ul>
+<li>**assets&#x2F;**：用于存放项目的静态资源文件，如图片、样式表等。</li>
+<li>**components&#x2F;**：包含可复用的Vue组件，可以在不同页面中使用。</li>
+<li>**views&#x2F;**：页面级别的Vue组件，通常与路由相关。</li>
+<li>**router&#x2F;**：Vue Router的配置文件，用于设置路由规则。</li>
+<li>**store&#x2F;**：Vuex状态管理文件，用于全局状态管理。</li>
+<li><strong>main.js</strong>：应用的入口JavaScript文件，初始化Vue应用并配置Vue插件等。</li>
+<li><strong>App.vue：</strong> 文件通常包含了应用的整体结构、布局和样式，同时也可以包含一些全局的组件和逻辑。这个文件在项目的入口处被引入并渲染，因此是整个Vue应用的主要入口点。</li>
+</ul>
+</li>
+<li>**tests&#x2F;**：包含测试文件和配置，用于单元测试和端到端测试。</li>
+<li><strong>node_modules&#x2F;：</strong>这是项目依赖的第三方库的存储位置，通常由npm或Yarn管理。</li>
+<li><strong>package-lock.json：</strong>这个文件用于锁定项目依赖库的版本，确保项目在不同环境中拥有相同的依赖版本。</li>
+<li><strong>package.json</strong>：项目依赖和配置文件，包含项目所需的依赖库、脚本命令等。</li>
+<li><strong>babel.config.js</strong>：Babel的配置文件，用于编译JavaScript代码。</li>
+<li><strong>vue.config.js</strong>：Vue CLI的配置文件，用于自定义Vue应用的构建和开发环境配置。</li>
+<li><strong>.eslintrc.js</strong>：ESLint的配置文件，用于代码规范检查和静态分析。</li>
+<li><strong>README.md</strong>：项目文档，包含项目的简介、安装、运行指南等信息。</li>
+</ol>
+<h2 id="3-Vue脚手架（vue-cli）"><a href="#3-Vue脚手架（vue-cli）" class="headerlink" title="3. Vue脚手架（vue-cli）"></a>3. Vue脚手架（vue-cli）</h2></div></article></div><div class="right-container"><div class="widget"><div id="arAnchorBar"></div></div></div></section></div><div class="right-menu"></div><div class="modal search-modal"><div class="input-field"><input type="text" id="search_input"><label for="search-input">搜索</label></div><div id="search_result" class="search-result"></div></div><div class="blog-overlay"></div><footer class="row"><div class="footer-con"><div class="paginator"><a href="/2023/10/31/9.%20API%E8%AF%B7%E6%B1%82%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/" title="API请求和数据交互" class="prev">PREV</a><a href="/2023/10/19/4.%20Vue%E7%89%B9%E6%80%A7/" title="" class="next">NEXT</a></div><div class="copyright"><p>© 2023 <a target="_blank">KyleSun</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <br> and <a href="https://github.com/Bulandent/hexo-theme-bubuzou" target="_blank">hexo-theme-bubuzou</a></p><p> <span style="padding-right: 6px;">闽ICP备16007301号-2</span></p></div><div class="totop"><i></i></div></div></footer><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/jquery-1.8.2.min.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/articleCatalog.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/main.js"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>const valineAPI = (() => {
+try {
+    AV.init("aD8jJBpu4oew3ovNY73z6Rdq-gzGzoHsz", "FdzS5SOPHdhYQoEUngQ8K2QW");
+} catch(error) {}
+const isExist = (identity) => {
+    identity = identity || getRealPath();
+    let query = new AV.Query('Timer');
+    return new Promise((resolve, reject) => {
+    query.equalTo("identity", identity);
+    query.find().then(results => {
+        resolve(results.length > 0);
+    }, error => reject(error));
+    })
+}
+
+const _get = (identity) => {
+    let query = null;
+    if(identity && identity instanceof Array){
+    let querys = [];
+    for(let i = 0; i < identity.length; ++i) {
+        querys[i] = new AV.Query('Timer');
+        querys[i].equalTo('identity', identity[i]);
+    }
+    query = AV.Query.or.apply(null ,querys);
+    } else {
+    identity = identity || getRealPath();
+    query = new AV.Query("Timer");
+    query.equalTo("identity", identity);
+    }
+
+    return new Promise((resolve, reject) => {
+    query.find()
+    .then(results => resolve(results))
+    .catch(error => reject(error))
+    })
+}
+
+const create = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let Todo = AV.Object.extend('Timer');
+    let todo = new Todo();
+    todo.set("times", 1);
+    todo.set("identity", identity);
+    todo.save().then(res => resolve(true), error => reject(error));
+    })
+}
+
+const update = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let query = new AV.Query('Timer');
+    query.equalTo("identity", identity);
+    query.find().then(todos => {
+        todos.forEach(todo => {
+        todo.set("times", todo.attributes.times + 1);
+        });
+        return AV.Object.saveAll(todos);
+    }).then(todos => resolve(true), error => reject(error));
+    })
+}
+
+return {
+    isExist,
+    _get,
+    update,
+    create
+}
+})()
+
+const calcAndWriteTimes = () => {
+let isPost = true;
+
+let timerAllDOM = document.querySelectorAll(".article-timer");
+
+if(isPost) {
+    let identity = timerAllDOM[0].getAttribute("data-identity");
+    valineAPI.isExist(identity)
+    .then(exist => {
+    if(exist) {
+        return valineAPI.update(identity);
+    }
+    return new Promise(resolve => resolve(true));
+    })
+    .then( succuess => valineAPI._get(identity))
+    .then( result => timerAllDOM[0].innerText = result[0].attributes.times)
+    .catch(error => console.log(error.message))
+    return ;
+}
+
+let timerDOMCache = {};
+
+for(let timerDOM of timerAllDOM) {
+    let identity = timerDOM.getAttribute("data-identity");
+    if(timerDOMCache.hasOwnProperty(identity)){
+    timerDOMCache[identity].dom.push(timerDOM);
+    }else{
+    timerDOMCache[identity] = {
+        dom: [timerDOM],
+        times: undefined
+    };
+    }
+}
+
+let identities = Object.keys(timerDOMCache);
+valineAPI._get(identities).then(results => {
+    for(let result of results) {
+    let {identity, times} = result.attributes;
+    timerDOMCache[identity].times = times;
+    timerDOMCache[identity].dom.map(item => item.innerText = times);
+    }
+    for(let identity of identities) {
+    if(timerDOMCache[identity].times){
+        continue;
+    }
+    timerDOMCache[identity].dom.map(item => item.innerText = 1);
+    valineAPI.create(identity);
+    }
+}).catch(error => console.log(error.message))
+}
+
+if(true){
+calcAndWriteTimes();
+}</script></body></html>
