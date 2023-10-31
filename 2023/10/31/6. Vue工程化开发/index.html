@@ -6,12 +6,10 @@
 <h3 id="步骤1：安装Vue-CLI"><a href="#步骤1：安装Vue-CLI" class="headerlink" title="步骤1：安装Vue CLI"></a>步骤1：安装Vue CLI</h3><p>首先，你需要全局安装Vue CLI。打开终端并运行以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
 
-<p>###步骤2：创建Vue项目</p>
-<p>Vue CLI将提示你选择一个预设配置或手动配置项目。选择一个预设配置，或使用箭头键和回车键进行手动配置。</p>
+<h3 id="步骤2：创建Vue项目"><a href="#步骤2：创建Vue项目" class="headerlink" title="步骤2：创建Vue项目"></a>步骤2：创建Vue项目</h3><p>Vue CLI将提示你选择一个预设配置或手动配置项目。选择一个预设配置，或使用箭头键和回车键进行手动配置。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create my-vue-app</span><br></pre></td></tr></table></figure>
 
-<p>###步骤3：项目配置</p>
-<p>如果你选择手动配置，你将需要配置一些选项，例如Babel、ESLint、预处理器等。根据你的项目需求进行选择，或使用默认配置。Vue CLI将显示一系列可配置的特性。使用箭头键和回车键来选择和配置这些特性，例如：</p>
+<h3 id="步骤3：项目配置"><a href="#步骤3：项目配置" class="headerlink" title="步骤3：项目配置"></a>步骤3：项目配置</h3><p>如果你选择手动配置，你将需要配置一些选项，例如Babel、ESLint、预处理器等。根据你的项目需求进行选择，或使用默认配置。Vue CLI将显示一系列可配置的特性。使用箭头键和回车键来选择和配置这些特性，例如：</p>
 <ul>
 <li><strong>Babel</strong>：用于将ES6+语法编译成浏览器可识别的JavaScript。</li>
 <li><strong>TypeScript</strong>：如果你想在项目中使用TypeScript。</li>
@@ -22,11 +20,9 @@
 <li><strong>Vuex</strong>：用于状态管理的支持。</li>
 <li>等等…</li>
 </ul>
-<p>###步骤4：依赖安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="步骤4：依赖安装"><a href="#步骤4：依赖安装" class="headerlink" title="步骤4：依赖安装"></a>步骤4：依赖安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
-<p>###步骤5：启动服务器</p>
-<ol>
+<h3 id="步骤5：启动服务器"><a href="#步骤5：启动服务器" class="headerlink" title="步骤5：启动服务器"></a>步骤5：启动服务器</h3><ol>
 <li><p><strong>进入项目目录</strong>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> my-vue-app</span><br></pre></td></tr></table></figure>
 </li>
@@ -37,12 +33,10 @@
 </li>
 </ol>
 <h3 id="步骤6：开发项目"><a href="#步骤6：开发项目" class="headerlink" title="步骤6：开发项目"></a>步骤6：开发项目</h3><p>现在你可以开始开发项目。Vue CLI已为你生成一个基本的Vue.js应用，你可以在<code>src/</code>目录中找到主要的应用代码。</p>
-<p>###步骤7：构建项目</p>
-<p>当项目完成时，你可以使用以下命令来构建生产版本的项目：这将生成一个<code>dist</code>目录，其中包含用于生产部署的优化文件。</p>
+<h3 id="步骤7：构建项目"><a href="#步骤7：构建项目" class="headerlink" title="步骤7：构建项目"></a>步骤7：构建项目</h3><p>当项目完成时，你可以使用以下命令来构建生产版本的项目：这将生成一个<code>dist</code>目录，其中包含用于生产部署的优化文件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
 
-<p>###步骤8：<strong>部署项目</strong></p>
-<p>将<code>dist</code>目录中的文件部署到Web服务器或静态文件托管服务上，以使你的Vue应用在生产环境中运行。</p>
+<h3 id="步骤8：部署项目"><a href="#步骤8：部署项目" class="headerlink" title="步骤8：部署项目"></a>步骤8：<strong>部署项目</strong></h3><p>将<code>dist</code>目录中的文件部署到Web服务器或静态文件托管服务上，以使你的Vue应用在生产环境中运行。</p>
 <h2 id="2-Vue项目架构"><a href="#2-Vue项目架构" class="headerlink" title="2. Vue项目架构"></a>2. Vue项目架构</h2><p>Vue.js项目通常遵循一种标准的项目结构，以确保项目的组织、可维护性和可扩展性。以下是一个常见的Vue项目结构示例：</p>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">my-vue-app/</span><br><span class="line">|<span class="comment">-- public/</span></span><br><span class="line">|   |<span class="comment">-- index.html           # 应用入口HTML文件</span></span><br><span class="line">|   |<span class="comment">-- favicon.ico          # 网站图标</span></span><br><span class="line">|<span class="comment">-- src/</span></span><br><span class="line">|   |<span class="comment">-- assets/              # 静态资源文件，如图片、样式表</span></span><br><span class="line">|   |<span class="comment">-- components/          # 可复用的Vue组件</span></span><br><span class="line">|   |<span class="comment">-- views/               # 页面级别的Vue组件</span></span><br><span class="line">|   |<span class="comment">-- router/              # Vue Router配置文件</span></span><br><span class="line">|   |<span class="comment">-- store/               # Vuex状态管理文件</span></span><br><span class="line">|   |<span class="comment">-- api/                 # API请求封装</span></span><br><span class="line">|   |<span class="comment">-- utils/               # 工具函数、辅助类</span></span><br><span class="line">|   |<span class="comment">-- mixins/              # 全局混入</span></span><br><span class="line">|   |<span class="comment">-- directives/          # 自定义指令</span></span><br><span class="line">|   |<span class="comment">-- filters/             # 过滤器</span></span><br><span class="line">|   |<span class="comment">-- plugins/             # 第三方插件或库</span></span><br><span class="line">|   |<span class="comment">-- styles/              # 全局样式文件</span></span><br><span class="line">|   |<span class="comment">-- main.js              # 应用入口JavaScript文件</span></span><br><span class="line">|   |<span class="comment">-- App.vue              # 应用的主组件</span></span><br><span class="line">|<span class="comment">-- tests/                   # 测试文件</span></span><br><span class="line">|<span class="comment">-- package.json             # 项目依赖和配置</span></span><br><span class="line">|<span class="comment">-- babel.config.js          # Babel配置文件</span></span><br><span class="line">|<span class="comment">-- vue.config.js            # Vue CLI配置文件</span></span><br><span class="line">|<span class="comment">-- .eslintrc.js             # ESLint配置文件</span></span><br><span class="line">|<span class="comment">-- README.md                # 项目文档</span></span><br></pre></td></tr></table></figure>
 
