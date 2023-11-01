@@ -110,15 +110,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/10/12/Vue%E7%AE%80%E4%BB%8B/</loc>
-    
-    <lastmod>2023-10-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/read/index.html</loc>
     
     <lastmod>2023-10-13</lastmod>
@@ -175,7 +166,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -183,28 +174,28 @@
   
   <url>
     <loc>http://example.com/tags/Git/</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Spring/</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/AOP/</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Vue/</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -213,28 +204,21 @@
   
   <url>
     <loc>http://example.com/categories/%E5%B7%A5%E4%BD%9C/</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/SpringMVC/</loc>
-    <lastmod>2023-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Vue/</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

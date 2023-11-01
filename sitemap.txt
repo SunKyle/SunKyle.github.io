@@ -10,7 +10,6 @@ http://example.com/2023/10/31/10.%20Vuex%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/
 http://example.com/2023/10/19/4.%20Vue%E7%89%B9%E6%80%A7/
 http://example.com/2023/07/25/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/
 http://example.com/2023/07/25/AOP/
-http://example.com/2023/10/12/Vue%E7%AE%80%E4%BB%8B/
 http://example.com/read/index.html
 http://example.com/live/index.html
 http://example.com/categories/index.html
@@ -24,5 +23,4 @@ http://example.com/tags/AOP/
 http://example.com/tags/Vue/
 http://example.com/categories/%E5%B7%A5%E4%BD%9C/
 http://example.com/categories/SpringMVC/
-http://example.com/categories/%E5%AD%A6%E4%B9%A0/
 http://example.com/categories/Vue/
